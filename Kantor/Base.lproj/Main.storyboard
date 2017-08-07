@@ -47,6 +47,9 @@
                                     <segment title="I buy"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="actionUpdateInterface" destination="9pv-A4-QxB" eventType="valueChanged" id="R46-gd-ZwR"/>
+                                </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="zmI-fq-I0b">
                                 <rect key="frame" x="64" y="153" width="295" height="43"/>
@@ -59,8 +62,9 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                         <connections>
+                                            <action selector="actionUserAmountChanged:" destination="9pv-A4-QxB" eventType="editingChanged" id="30Q-Wa-jDL"/>
                                             <outlet property="delegate" destination="9pv-A4-QxB" id="b3I-ED-Mjk"/>
                                         </connections>
                                     </textField>

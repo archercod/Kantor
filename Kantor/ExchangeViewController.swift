@@ -14,18 +14,38 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userAmountTextField: UITextField!
     @IBOutlet weak var exchangeLabel: UILabel!
     @IBOutlet weak var currencyButton: UIButton!
-    @IBOutlet weak var hideUserInputsButton: UIBarButtonItem!
+    @IBOutlet var hideUserInputsButton: UIBarButtonItem!
+    
+    var result: (buy: Float, sell: Float) = (0.0,0.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         userAmountTextField.text = "100"
         
+        actionUserAmountChanged(userAmountTextField)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func actionUpdateInterface() {
+        var displayResult: Float = 0.0
+        
+        if (segmentedControl.selectedSegmentIndex == 0) {
+            displayResult = result.sell
+        } else {
+            displayResult = result.buy
+        }
+        
+        exchangeLabel.text = "\(displayResult)"
+    }
+    
+    @IBAction func actionUserAmountChanged(_ sender: Any) {
+        result.buy = Float(Int(userAmountTextField.text!)! * 3)
+        result.sell = Float(Int(userAmountTextField.text!)! * 4)
     }
 
     @IBAction func actionHideUserInputs(_ sender: Any) {
