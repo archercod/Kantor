@@ -24,6 +24,9 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
         userAmountTextField.text = "100"
         
         actionUserAmountChanged(userAmountTextField)
+        
+        let tapGest = UITapGestureRecognizer(target: self, action: #selector(ExchangeViewController.actionHideUserInputs(_:)))
+        self.view.addGestureRecognizer(tapGest)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,6 +49,8 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
     @IBAction func actionUserAmountChanged(_ sender: Any) {
         result.buy = Float(Int(userAmountTextField.text!)! * 3)
         result.sell = Float(Int(userAmountTextField.text!)! * 4)
+        
+        actionUpdateInterface()
     }
 
     @IBAction func actionHideUserInputs(_ sender: Any) {
