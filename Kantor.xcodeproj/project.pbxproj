@@ -13,6 +13,8 @@
 		EAF9EE921F390E2B0045E603 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF9EE901F390E2B0045E603 /* Main.storyboard */; };
 		EAF9EE941F390E2B0045E603 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF9EE931F390E2B0045E603 /* Assets.xcassets */; };
 		EAF9EE971F390E2B0045E603 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF9EE951F390E2B0045E603 /* LaunchScreen.storyboard */; };
+		EAF9EEA31F3995AC0045E603 /* Kantor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF9EEA21F3995AC0045E603 /* Kantor.swift */; };
+		EAF9EEA61F3996AE0045E603 /* currencies.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAF9EEA51F3996AE0045E603 /* currencies.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		EAF9EE931F390E2B0045E603 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAF9EE961F390E2B0045E603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAF9EE981F390E2B0045E603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAF9EEA21F3995AC0045E603 /* Kantor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Kantor.swift; path = Source/Kantor.swift; sourceTree = "<group>"; };
+		EAF9EEA51F3996AE0045E603 /* currencies.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = currencies.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +61,64 @@
 			isa = PBXGroup;
 			children = (
 				EAF9EE8A1F390E2B0045E603 /* AppDelegate.swift */,
-				EAF9EE8C1F390E2B0045E603 /* ExchangeViewController.swift */,
-				EAF9EE8E1F390E2B0045E603 /* AboutViewController.swift */,
-				EAF9EE901F390E2B0045E603 /* Main.storyboard */,
-				EAF9EE931F390E2B0045E603 /* Assets.xcassets */,
-				EAF9EE951F390E2B0045E603 /* LaunchScreen.storyboard */,
-				EAF9EE981F390E2B0045E603 /* Info.plist */,
+				EAF9EEA41F3995B30045E603 /* Models */,
+				EAF9EE9E1F39954D0045E603 /* ViewControllers */,
+				EAF9EE9F1F3995630045E603 /* Interfaces */,
+				EAF9EEA01F39956E0045E603 /* Assets */,
+				EAF9EEA71F3996C90045E603 /* Data */,
+				EAF9EEA11F39957E0045E603 /* SupportingFiles */,
 			);
 			path = Kantor;
+			sourceTree = "<group>";
+		};
+		EAF9EE9E1F39954D0045E603 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EAF9EE8C1F390E2B0045E603 /* ExchangeViewController.swift */,
+				EAF9EE8E1F390E2B0045E603 /* AboutViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EAF9EE9F1F3995630045E603 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				EAF9EE901F390E2B0045E603 /* Main.storyboard */,
+				EAF9EE951F390E2B0045E603 /* LaunchScreen.storyboard */,
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
+		EAF9EEA01F39956E0045E603 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EAF9EE931F390E2B0045E603 /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		EAF9EEA11F39957E0045E603 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EAF9EE981F390E2B0045E603 /* Info.plist */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		EAF9EEA41F3995B30045E603 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EAF9EEA21F3995AC0045E603 /* Kantor.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EAF9EEA71F3996C90045E603 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EAF9EEA51F3996AE0045E603 /* currencies.plist */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAF9EE971F390E2B0045E603 /* LaunchScreen.storyboard in Resources */,
+				EAF9EEA61F3996AE0045E603 /* currencies.plist in Resources */,
 				EAF9EE941F390E2B0045E603 /* Assets.xcassets in Resources */,
 				EAF9EE921F390E2B0045E603 /* Main.storyboard in Resources */,
 			);
@@ -141,6 +196,7 @@
 			files = (
 				EAF9EE8F1F390E2B0045E603 /* AboutViewController.swift in Sources */,
 				EAF9EE8B1F390E2B0045E603 /* AppDelegate.swift in Sources */,
+				EAF9EEA31F3995AC0045E603 /* Kantor.swift in Sources */,
 				EAF9EE8D1F390E2B0045E603 /* ExchangeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>buy</key>
+		<real>3.1967</real>
+		<key>code</key>
+		<string>USD</string>
+		<key>conversion</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>Dolar Amerykański</string>
+		<key>sell</key>
+		<real>3.2613</real>
+	</dict>
+	<dict>
+		<key>buy</key>
+		<real>2.8962</real>
+		<key>code</key>
+		<string>AUD</string>
+		<key>conversion</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>Dolar Australijski</string>
+		<key>sell</key>
+		<real>2.9548</real>
+	</dict>
+	<dict>
+		<key>buy</key>
+		<real>2.9166</real>
+		<key>code</key>
+		<string>CAD</string>
+		<key>conversion</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>Dolar Kanadyjski</string>
+		<key>sell</key>
+		<real>2.9756</real>
+	</dict>
+	<dict>
+		<key>buy</key>
+		<real>4.1442</real>
+		<key>code</key>
+		<string>EUR</string>
+		<key>conversion</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>Euro</string>
+		<key>sell</key>
+		<real>4.228</real>
+	</dict>
+	<dict>
+		<key>buy</key>
+		<real>1.3228</real>
+		<key>code</key>
+		<string>HUF</string>
+		<key>conversion</key>
+		<integer>100</integer>
+		<key>name</key>
+		<string>Forint (Węgry)</string>
+		<key>sell</key>
+		<real>1.3496</real>
+	</dict>
+	<dict>
+		<key>buy</key>
+		<real>3.4213</real>
+		<key>code</key>
+		<string>CHF</string>
+		<key>conversion</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>Frank szwajcarski</string>
+		<key>sell</key>
+		<real>3.4905</real>
+	</dict>
+	<dict>
+		<key>buy</key>
+		<real>5.2224</real>
+		<key>code</key>
+		<string>GBP</string>
+		<key>conversion</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>Funt szterling</string>
+		<key>sell</key>
+		<real>5.328</real>
+	</dict>
+	<dict>
+		<key>buy</key>
+		<real>2.9792</real>
+		<key>code</key>
+		<string>JPY</string>
+		<key>conversion</key>
+		<integer>100</integer>
+		<key>name</key>
+		<string>Jen (Japonia)</string>
+		<key>sell</key>
+		<real>3.0394</real>
+	</dict>
+	<dict>
+		<key>buy</key>
+		<real>0.1504</real>
+		<key>code</key>
+		<string>CZK</string>
+		<key>conversion</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>Korona Czeska</string>
+		<key>sell</key>
+		<real>0.1534</real>
+	</dict>
+	<dict>
+		<key>buy</key>
+		<real>0.5566</real>
+		<key>code</key>
+		<string>DKK</string>
+		<key>conversion</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>Korona Duńska</string>
+		<key>sell</key>
+		<real>0.5678</real>
+	</dict>
+	<dict>
+		<key>buy</key>
+		<real>0.4988</real>
+		<key>code</key>
+		<string>NOK</string>
+		<key>conversion</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>Korona norweska</string>
+		<key>sell</key>
+		<real>0.5088</real>
+	</dict>
+	<dict>
+		<key>buy</key>
+		<real>0.4484</real>
+		<key>code</key>
+		<string>SEK</string>
+		<key>conversion</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>Korona Szwedzka</string>
+		<key>sell</key>
+		<real>0.4574</real>
+	</dict>
+	<dict>
+		<key>buy</key>
+		<real>4.8038</real>
+		<key>code</key>
+		<string>XDR</string>
+		<key>conversion</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>SDR (MFW)</string>
+		<key>sell</key>
+		<real>4.9008</real>
+	</dict>
+</array>
+</plist>

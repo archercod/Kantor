@@ -51,6 +51,14 @@
                                     <action selector="actionUpdateInterface" destination="9pv-A4-QxB" eventType="valueChanged" id="R46-gd-ZwR"/>
                                 </connections>
                             </segmentedControl>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xol-E1-8AX">
+                                <rect key="frame" x="0.0" y="402" width="375" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="3P0-sk-LYU"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="0zy-Yf-U8G"/>
+                                </connections>
+                            </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="zmI-fq-I0b">
                                 <rect key="frame" x="64" y="153" width="295" height="43"/>
                                 <subviews>
@@ -82,6 +90,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="TSD-1n-1hn" secondAttribute="trailing" constant="79" id="0C9-ep-0mR"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="xol-E1-8AX" secondAttribute="bottom" id="3Mt-QA-rYJ"/>
                             <constraint firstItem="TSD-1n-1hn" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="79" id="6HI-dN-xZA"/>
                             <constraint firstAttribute="trailing" secondItem="cm7-wD-8Hc" secondAttribute="trailing" id="9Vo-Mq-zsd"/>
                             <constraint firstItem="cm7-wD-8Hc" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="BOq-Gc-nNR"/>
@@ -93,8 +102,10 @@
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="cm7-wD-8Hc" secondAttribute="bottom" id="hnI-AQ-se7"/>
                             <constraint firstItem="pWI-b4-ikV" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="n6s-3M-dGa"/>
                             <constraint firstItem="pWI-b4-ikV" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="qf4-3n-lev"/>
+                            <constraint firstItem="xol-E1-8AX" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="teV-wM-fXO"/>
                             <constraint firstItem="zmI-fq-I0b" firstAttribute="top" secondItem="TSD-1n-1hn" secondAttribute="bottom" constant="31" id="w5E-xC-ha4"/>
                             <constraint firstItem="zmI-fq-I0b" firstAttribute="trailing" secondItem="pWI-b4-ikV" secondAttribute="trailing" id="wY9-01-NuZ"/>
+                            <constraint firstAttribute="trailing" secondItem="xol-E1-8AX" secondAttribute="trailing" id="wxP-z6-79r"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kantor" id="xuf-m4-HAC">
@@ -105,6 +116,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="currenciesPickerView" destination="xol-E1-8AX" id="Bsd-Yw-uj0"/>
                         <outlet property="currencyButton" destination="U6y-BH-HIu" id="nEh-8v-umE"/>
                         <outlet property="exchangeLabel" destination="pWI-b4-ikV" id="8VU-Yw-3oe"/>
                         <outlet property="hideUserInputsButton" destination="w3K-1X-MkN" id="i2w-7Q-i3q"/>
