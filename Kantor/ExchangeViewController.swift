@@ -28,6 +28,13 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var defaults = UserDefaults.standard
+        selectedCurrencyCode = defaults.string(forKey: "selectedCurrencyCode")
+        
+        if let code = selectedCurrencyCode {
+            currencyButton.setTitle(code, for: .normal)
+        }
+        
         userAmountTextField.text = "100"
         
         actionExchange()
@@ -92,8 +99,37 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         actionExchange()
     }
 
+    @IBAction func actionShowCurrenciesView(_ sender: Any) {
+        currenciesPickerView.isHidden = false
+        navigationItem.rightBarButtonItem = hideUserInputsButton
+        
+        if let code = selectedCurrencyCode {
+            var allCodes = [String](kantor.currencies.keys)
+            
+            var row: Int?
+            var index = 0
+            
+            for item in allCodes {
+                if (item == code) {
+                    row = index
+                    break
+                }
+                
+                index += index
+            }
+            
+            
+            if let currencyRow = row {
+                currenciesPickerView.selectRow(currencyRow, inComponent: 0, animated: false)
+            }
+        }
+        
+        currenciesPickerView.selectRow(1, inComponent: 0, animated: false)
+    }
+    
     @IBAction func actionHideUserInputs(_ sender: Any) {
         userAmountTextField.resignFirstResponder()
+        currenciesPickerView.isHidden = true
         navigationItem.rightBarButtonItem = nil
     }
     
@@ -130,6 +166,11 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         selectedCurrencyCode = allCodes[row]
         
         if let code = selectedCurrencyCode {
+            
+            var defaults = UserDefaults.standard
+            defaults.set(code, forKey: "selectedCurrencyCode")
+            defaults.synchronize()
+            
             currencyButton.setTitle(code, for: .normal)
             
             actionExchange()

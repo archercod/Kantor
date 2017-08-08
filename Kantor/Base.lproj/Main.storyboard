@@ -51,7 +51,7 @@
                                     <action selector="actionUpdateInterface" destination="9pv-A4-QxB" eventType="valueChanged" id="R46-gd-ZwR"/>
                                 </connections>
                             </segmentedControl>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xol-E1-8AX">
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xol-E1-8AX">
                                 <rect key="frame" x="0.0" y="402" width="375" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -62,7 +62,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upe-Az-2Ht">
                                 <rect key="frame" x="166" y="286" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="zmI-fq-I0b">
@@ -89,6 +89,9 @@
                                         <state key="normal" title="USD">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="actionShowCurrenciesView:" destination="9pv-A4-QxB" eventType="touchUpInside" id="pE2-PD-jdL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
