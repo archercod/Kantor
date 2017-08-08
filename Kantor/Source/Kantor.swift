@@ -21,8 +21,12 @@ struct Currency {
 class Kantor: NSObject {
     
     var currencies: [String:Currency] = [:]
+    var currencyFormatter = NumberFormatter()
     
     override init() {
+        
+        currencyFormatter.numberStyle = .currency
+        currencyFormatter.currencySymbol = ""
         
         if let path = Bundle.main.path(forResource: "currencies", ofType: "plist") {
             if let list = NSArray(contentsOfFile: path) as Array<AnyObject>? {

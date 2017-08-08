@@ -59,6 +59,12 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="0zy-Yf-U8G"/>
                                 </connections>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upe-Az-2Ht">
+                                <rect key="frame" x="166" y="286" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="zmI-fq-I0b">
                                 <rect key="frame" x="64" y="153" width="295" height="43"/>
                                 <subviews>
@@ -90,8 +96,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="TSD-1n-1hn" secondAttribute="trailing" constant="79" id="0C9-ep-0mR"/>
+                            <constraint firstItem="upe-Az-2Ht" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="1Ka-4o-zq5"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="xol-E1-8AX" secondAttribute="bottom" id="3Mt-QA-rYJ"/>
                             <constraint firstItem="TSD-1n-1hn" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="79" id="6HI-dN-xZA"/>
+                            <constraint firstItem="upe-Az-2Ht" firstAttribute="top" secondItem="pWI-b4-ikV" secondAttribute="bottom" constant="8" id="6yJ-mF-V2X"/>
                             <constraint firstAttribute="trailing" secondItem="cm7-wD-8Hc" secondAttribute="trailing" id="9Vo-Mq-zsd"/>
                             <constraint firstItem="cm7-wD-8Hc" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="BOq-Gc-nNR"/>
                             <constraint firstItem="TSD-1n-1hn" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="30" id="BpO-sF-xYU"/>
@@ -121,6 +129,7 @@
                         <outlet property="exchangeLabel" destination="pWI-b4-ikV" id="8VU-Yw-3oe"/>
                         <outlet property="hideUserInputsButton" destination="w3K-1X-MkN" id="i2w-7Q-i3q"/>
                         <outlet property="segmentedControl" destination="TSD-1n-1hn" id="hEf-ga-gqz"/>
+                        <outlet property="updatedDateLabel" destination="upe-Az-2Ht" id="tOY-Oa-98m"/>
                         <outlet property="userAmountTextField" destination="8kH-3i-VM3" id="7md-Dw-SCo"/>
                     </connections>
                 </viewController>

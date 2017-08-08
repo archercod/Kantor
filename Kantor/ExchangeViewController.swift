@@ -16,6 +16,7 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     @IBOutlet weak var currencyButton: UIButton!
     @IBOutlet var hideUserInputsButton: UIBarButtonItem!
     @IBOutlet weak var currenciesPickerView: UIPickerView!
+    @IBOutlet weak var updatedDateLabel: UILabel!
     
     var result: (buy: Float, sell: Float) = (0.0,0.0)
     
@@ -30,6 +31,7 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         userAmountTextField.text = "100"
         
         actionExchange()
+        showUpdatedDate()
         
         let tapGest = UITapGestureRecognizer(target: self, action: #selector(ExchangeViewController.actionHideUserInputs(_:)))
         self.view.addGestureRecognizer(tapGest)
@@ -41,6 +43,16 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     }
     
 //  MARK: My Methods -
+    
+    func showUpdatedDate() {
+        var today = NSDate()
+        
+        var dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .none
+        
+        updatedDateLabel.text = dateFormatter.string(from: today as Date)
+    }
     
     func actionExchange() {
         let amount = Float(Int(userAmountTextField.text!)!)
@@ -70,7 +82,9 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
             displayResult = result.buy
         }
         
-        exchangeLabel.text = "\(displayResult)"
+        var number = NSNumber(value: displayResult)
+        
+        exchangeLabel.text = kantor.currencyFormatter.string(from: number)
     }
     
     @IBAction func actionUserAmountChanged(_ sender: Any) {
